@@ -157,7 +157,8 @@
     <ClCompile Include="Workpad.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Solutions\Day0HelloWorld.txt" />
+    <Content Include="Solutions\Day0_HelloWorld.txt" />
+    <Content Include="Solutions\Day1_DataTypes.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

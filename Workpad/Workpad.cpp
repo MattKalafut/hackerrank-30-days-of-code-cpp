@@ -1,19 +1,25 @@
 #include <iostream>
-#include <string>
+#include <iomanip>
+#include <limits>
+
 using namespace std;
 
 int main() {
-    // Declare a variable named 'input_string' to hold our input.
-    string inputString;
+    int i = 4;
+    double d = 4.0;
+    string s = "HackerRank ";
 
-    // Read a full line of input from stdin (cin) and save it to our variable, input_string.
-    getline(cin, inputString);
-
-    // Print a string literal saying "Hello, World." to stdout using cout.
-    cout << "Hello, World." << endl;
-
-    // TODO: Write a line of code here that prints the contents of input_string to stdout.
-    cout << inputString << endl;
+    
+    // Declare second integer, double, and String variables.
+    
+    // Read and save an integer, double, and String to your variables.
+    // Note: If you have trouble reading the entire string, please go back and review the Tutorial closely.
+    
+    // Print the sum of both integer variables on a new line.
+    
+    // Print the sum of the double variables on a new line.
+    
+    // Concatenate and print the String variables on a new line
+    // The 's' variable above should be printed first.
 
     return 0;
-}
