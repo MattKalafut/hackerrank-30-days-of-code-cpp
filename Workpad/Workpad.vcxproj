@@ -159,6 +159,7 @@
   <ItemGroup>
     <Content Include="Solutions\Day0_HelloWorld.txt" />
     <Content Include="Solutions\Day1_DataTypes.txt" />
+    <Content Include="Solutions\Day2_Operators.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

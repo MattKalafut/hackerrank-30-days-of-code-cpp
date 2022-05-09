@@ -1,0 +1,90 @@
+﻿I first want to say that the C++ compiler in HackerRank's editor is absolute shit.  
+The "Problem" section as well as the examples and explanations are also incorrect in some spots.  In any event, here is the Problem write-up for this day's problem.
+
+Objective
+In this challenge, you will work with arithmetic operators.
+
+ask
+Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip), and tax percent (the percentage of the meal price being added as tax) for a meal, find and print the meal's total cost. Round the result to the nearest integer.
+
+Example
+mealCost = 100
+tipPercent = 15
+taxPercent = 8
+
+A tip of 15% * 100 = 15, and the taxes are 8% * 100 = 8. Print the value 123 and return from the function.
+
+Function Description
+Complete the solve function in the editor below.
+
+solve has the following parameters:
+
+int mealCost: the cost of food before tip and tax
+int tipPercent: the tip percentage
+int taxPercent: the tax percentage
+Returns The function returns nothing. Print the calculated value, rounded to the nearest integer.
+
+Note: Be sure to use precise values for your calculations, or you may end up with an incorrectly rounded result.
+
+Input Format
+
+There are 3 lines of numeric input:
+The first line has a double, mealCost (the cost of the meal before tax and tip).
+The second line has an integer, tipPercent (the percentage of mealCost being added as tip).
+The third line has an integer, taxPercent (the percentage of mealCost being added as tax).
+
+Sample Input
+
+12.00
+20
+8
+Sample Output
+
+15
+
+________________________________________________________________________________________________________________________
+
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+/*
+ * Complete the 'solve' function below.
+ *
+ * The function accepts following parameters:
+ *  1. DOUBLE meal_cost
+ *  2. INTEGER tip_percent
+ *  3. INTEGER tax_percent
+ */
+
+void solve(double mealCost, int tipPercent, int taxPercent)
+{
+    // tipAmount = (tipPercent / 100) x mealCost
+    double tipAmount = (static_cast<double>(tipPercent) / 100) * mealCost;
+    //cout << tipAmount;
+
+    // taxAmount = (taxPercent / 100) * mealCost
+    double taxAmount = (static_cast<double>(taxPercent) / 100) * mealCost;
+    //cout << taxAmount;
+
+    double totalCost = mealCost + tipAmount + taxAmount;
+        
+    cout << round(totalCost);
+}
+
+int main()
+{
+    double mealCost;
+    int tipPercent;
+    int taxPercent;
+
+    cin >> mealCost;
+    cin >> tipPercent;
+    cin >> taxPercent;
+
+    solve(mealCost, tipPercent, taxPercent);
+
+    return 0;
+}

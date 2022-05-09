@@ -1,25 +1,43 @@
 #include <iostream>
-#include <iomanip>
-#include <limits>
-
+#include <cmath>
 using namespace std;
 
-int main() {
-    int i = 4;
-    double d = 4.0;
-    string s = "HackerRank ";
 
-    
-    // Declare second integer, double, and String variables.
-    
-    // Read and save an integer, double, and String to your variables.
-    // Note: If you have trouble reading the entire string, please go back and review the Tutorial closely.
-    
-    // Print the sum of both integer variables on a new line.
-    
-    // Print the sum of the double variables on a new line.
-    
-    // Concatenate and print the String variables on a new line
-    // The 's' variable above should be printed first.
+/*
+ * Complete the 'solve' function below.
+ *
+ * The function accepts following parameters:
+ *  1. DOUBLE meal_cost
+ *  2. INTEGER tip_percent
+ *  3. INTEGER tax_percent
+ */
+
+void solve(double mealCost, int tipPercent, int taxPercent)
+{
+    // tipAmount = (tipPercent / 100) x mealCost
+    double tipAmount = (static_cast<double>(tipPercent) / 100) * mealCost;
+    //cout << tipAmount;
+
+    // taxAmount = (taxPercent / 100) * mealCost
+    double taxAmount = (static_cast<double>(taxPercent) / 100) * mealCost;
+    //cout << taxAmount;
+
+    double totalCost = mealCost + tipAmount + taxAmount;
+        
+    cout << round(totalCost);
+}
+
+int main()
+{
+    double mealCost;
+    int tipPercent;
+    int taxPercent;
+
+    cin >> mealCost;
+    cin >> tipPercent;
+    cin >> taxPercent;
+
+    solve(mealCost, tipPercent, taxPercent);
 
     return 0;
+}
