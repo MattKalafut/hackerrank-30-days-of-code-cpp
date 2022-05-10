@@ -1,41 +1,47 @@
-#include <iostream>
+#include <iostream>>
 using namespace std;
 
-/*
-Given an integer, , perform the following conditional actions:
-
-If  is odd, print Weird
-If  is even and in the inclusive range of 2 to 5, print Not Weird
-If  is even and in the inclusive range of 6 to 20, print Weird
-If  is even and greater than 20, print Not Weird
- */
 int main()
 {
-    int num;
-    cin >> num;
-
-    // Odd number
-    if (num % 2 != 0)
+    // Create a structure variable called myStructure
+    struct
     {
-        cout << "Weird";
-    }
+        int myNum = 0;
+        string myString;
+    } myStructure;
 
-    // Even number
-    if (num % 2 == 0)
+    // Assign values to members of myStructure
+    myStructure.myNum = 1;
+    myStructure.myString = "Foo";
+
+    // Print members of myStructure
+    cout << myStructure.myNum << "\n";
+    cout << myStructure.myString << "\n";
+
+
+    // Declare a structure type as a variable named "car"
+    struct car
     {
-        if (num >= 2 && num <= 5)
-        {
-            cout << "Not Weird";
-        }
-        if (num >= 6 && num <= 20)
-        {
-            cout << "Weird";
-        }
-        if (num > 20)
-        {
-            cout << "Not Weird";
-        }
-    }
+        string brand;
+        string model;
+        int year;
+    };
+
+    // Create a car structure and store it in myCar1;
+    car myCar1;
+    myCar1.brand = "BMW";
+    myCar1.model = "X5";
+    myCar1.year = 1999;
+
+    // Create another car structure and store it in myCar2;
+    car myCar2;
+    myCar2.brand = "Ford";
+    myCar2.model = "Mustang";
+    myCar2.year = 1969;
+ 
+    // Print the structure members
+    cout << myCar1.brand << " " << myCar1.model << " " << myCar1.year << "\n";
+    cout << myCar2.brand << " " << myCar2.model << " " << myCar2.year << "\n";
 
     return 0;
 }
