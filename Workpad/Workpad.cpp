@@ -1,47 +1,32 @@
-#include <iostream>>
+#include <iostream>
 using namespace std;
 
 int main()
 {
-    // Create a structure variable called myStructure
-    struct
-    {
-        int myNum = 0;
-        string myString;
-    } myStructure;
+    /* The following code essentially does the following:
+    Create a pointer variable with the name ptr, that points to a string variable, by using the asterisk sign * (string* ptr).
+    Note that the type of the pointer has to match the type of the variable you're working with.
+    Use the & operator to store the memory address of the variable called food, and assign it to the pointer.
+    Now, ptr holds the value of food's memory address.*/
+    
+    string food = "Sushi"; // string variable food
+    string* ptr = &food; // Pointer variable ptr, stores address of food
 
-    // Assign values to members of myStructure
-    myStructure.myNum = 1;
-    myStructure.myString = "Foo";
+    // Output the value of food (Sushi)
+    cout << food << endl;
 
-    // Print members of myStructure
-    cout << myStructure.myNum << "\n";
-    cout << myStructure.myString << "\n";
+    // Output the memory address of food
+    cout << &food << endl;
 
+    // Output the memory address of food with the pointer (identical functionality to the line above)
+    cout << ptr << endl;
 
-    // Declare a structure type as a variable named "car"
-    struct car
-    {
-        string brand;
-        string model;
-        int year;
-    };
+    // Dereference: output the value of food with the pointer (Sushi)
+    cout << *ptr << endl;
 
-    // Create a car structure and store it in myCar1;
-    car myCar1;
-    myCar1.brand = "BMW";
-    myCar1.model = "X5";
-    myCar1.year = 1999;
-
-    // Create another car structure and store it in myCar2;
-    car myCar2;
-    myCar2.brand = "Ford";
-    myCar2.model = "Mustang";
-    myCar2.year = 1969;
- 
-    // Print the structure members
-    cout << myCar1.brand << " " << myCar1.model << " " << myCar1.year << "\n";
-    cout << myCar2.brand << " " << myCar2.model << " " << myCar2.year << "\n";
+    // Note that the * sign is contextual:
+    //  When used in declaration (string* ptr) it creates a POINTER VARIABLE
+    //  When NOT used in a declaration (cout << *ptr) it acts as a DEREFERENCE OPERATOR
 
     return 0;
 }
