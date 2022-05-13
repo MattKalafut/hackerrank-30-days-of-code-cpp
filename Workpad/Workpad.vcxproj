@@ -161,6 +161,7 @@
     <Content Include="Solutions\Day1_DataTypes.txt" />
     <Content Include="Solutions\Day2_Operators.txt" />
     <Content Include="Solutions\Day3_ConditionalStatements.txt" />
+    <Content Include="Solutions\Day4_ClassVsInstance.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
